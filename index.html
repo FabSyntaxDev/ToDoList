@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todoist - Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-title">
+                <span class="icon">⚡</span>
+                <h1>Todoist</h1>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats">
+                <div class="stat-card total">
+                    <div class="stat-label">Total</div>
+                    <div class="stat-value" id="totalTasks">0</div>
+                </div>
+                <div class="stat-card active">
+                    <div class="stat-label">Ativas</div>
+                    <div class="stat-value" id="activeTasks">0</div>
+                </div>
+                <div class="stat-card completed">
+                    <div class="stat-label">Concluídas</div>
+                    <div class="stat-value" id="completedTasks">0</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Section -->
+        <div class="input-section">
+            <div class="input-group">
+                <input type="text" id="taskInput" placeholder="Adicione uma nova tarefa..." autocomplete="off">
+                <button class="btn-add" onclick="addTask()">
+                    <span>+</span>
+                    <span>Adicionar</span>
+                </button>
+            </div>
+
+            <div class="priority-buttons">
+                <button class="priority-btn active" onclick="setPriority('low')">
+                    🔵 Baixa
+                </button>
+                <button class="priority-btn" onclick="setPriority('medium')">
+                    🟡 Média
+                </button>
+                <button class="priority-btn" onclick="setPriority('high')">
+                    🔴 Alta
+                </button>
+            </div>
+        </div>
+
+        <!-- Tasks List -->
+        <div class="tasks-list" id="tasksList">
+            <div class="empty-state">
+                <p>Nenhuma tarefa ainda!</p>
+                <p>Adicione uma tarefa para começar 🚀</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+
+</html>
