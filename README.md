@@ -18,3 +18,5 @@ HTML5: Estruturação semântica da aplicação.
 CSS3: Estilização moderna com uso de Flexbox, Grid e gradientes.
 
 JavaScript (ES6+): Lógica de manipulação de estado, renderização dinâmica e armazenamento local.
+
+Link do site: todolist2030.netlify.app
